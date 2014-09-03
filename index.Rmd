@@ -1,0 +1,309 @@
+---
+title       : Ch. 2 Measurement & Data
+subtitle    : Soc 303 Lecture 3 9/3/14
+author      : Sherri Verdugo, M.S.
+job         : Instructor, CSUF
+framework   : io2012
+theme       : tomorrow
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : default       
+widgets     : [mathjax, quiz, bootstrap]  
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Administration Items Lecture 3: 9/3/14
+
+* Office Hours: New
+* Schedule coming out next week for all items this semester
+* Recap: Textbook Chapter One was discussed last week
+* New: Chapter 2 Introduction
+
+
+--- .class #id 
+
+## New Office Hours
+
+Instructor        | Sherri Ann Verdugo, M.S.
+------------------|-------------------------------------
+Soc 303–03 15668  | Room: H512 
+                  | Mon. & Wed. 2:30 – 3:45PM
+Office: CP-923    | Hours: Wednesday 1:00 - 2:00PM
+                  | Hours: Tuesday 10:00 - 11:00 AM
+Phone             | 657.278.6728
+Soc 303–85 16584  | Room: IRVC-203 
+                  | Friday 1:00 – 3:45PM 
+Office:           | Hours: Friday 11:00 - 12:00PM
+Google Voice:     | 562.444.5036
+
+--- .class #id
+
+## Key Concepts
+
+Term                         | Pages  | Term                                 | Pages
+-----------------------------|--------|--------------------------------------|--------
+measurement                  |   34   | frequencies                          | 45
+levels of measurement: scales|   35   | scores                               | 45
+qualitative: Categorical     |   35   | interval level of measurement        | 46
+quantitative: Numerical      |   35   | ratio level of measurement           | 46
+nominal level of measurement |   36   | absolute zero                        | 47
+attributes versus quantities |   36   | demographic variables                | 47
+individual nominal data      |   38   | individual interval data/ raw  score | 48
+grouped Nominal data         |   39   | ungrouped frequency distribution     | 49
+frequency distributions      |   39   | grouped interval data                | 51
+dichotomies                  |   39   | class interval                       | 51
+n-category                   |   40   | closed-ended intervals               | 52
+ordinal level of measurement |   40   | open-ended intervals                 | 52
+individual ordinal data      |   40   | likert scale                         | 43
+grouped ordinal data         |   41   |                                      |
+
+--- .class #id
+
+## Prologue
+
+We are investigating data...numerical and sometimes not numerical (outside of the scope for this class). 
+
+* Data: information specifically intended to assist decision making or to provide analysis (page 33, textbook).
+
+* Pro tip: numerical data is something that gives us insight into the sociological and social science perspectives we want to study.
+
+--- .class #id
+
+## Measurement: 
+**N**(nominal)**O**(ordinal)**I**(interval)**R**(atio)
+
+## Definition:
+  A very specific process, such as measuring length, or the assignment to a category.     (page 34)
+
+## Levels:
+Measurement can be classified as the four levels of measurement: nominal, ordinal, interval and ratio (noir).
+
+### Qualitative
+Data assigned to categories that do not imply amounts. (nominal, ordinal)
+
+### Quantitative
+Data assigned to categories that are involved in amounts. (interval, ratio)
+
+--- .class #id
+
+## Example
+
+```r
+library(vcdExtra)
+library(xtable)
+data(ICU)
+icu.sub <- ICU[, 1:6]
+print(xtable(head(icu.sub, 5)), type="html")
+```
+
+<!-- html table generated in R 3.1.0 by xtable 1.7-3 package -->
+<!-- Tue Sep  2 14:33:15 2014 -->
+<TABLE border=1>
+<TR> <TH>  </TH> <TH> died </TH> <TH> age </TH> <TH> sex </TH> <TH> race </TH> <TH> service </TH> <TH> cancer </TH>  </TR>
+  <TR> <TD align="right"> 8 </TD> <TD> No </TD> <TD align="right">  27 </TD> <TD> Female </TD> <TD> White </TD> <TD> Medical </TD> <TD> No </TD> </TR>
+  <TR> <TD align="right"> 12 </TD> <TD> No </TD> <TD align="right">  59 </TD> <TD> Male </TD> <TD> White </TD> <TD> Medical </TD> <TD> No </TD> </TR>
+  <TR> <TD align="right"> 14 </TD> <TD> No </TD> <TD align="right">  77 </TD> <TD> Male </TD> <TD> White </TD> <TD> Surgical </TD> <TD> No </TD> </TR>
+  <TR> <TD align="right"> 28 </TD> <TD> No </TD> <TD align="right">  54 </TD> <TD> Male </TD> <TD> White </TD> <TD> Medical </TD> <TD> No </TD> </TR>
+  <TR> <TD align="right"> 32 </TD> <TD> No </TD> <TD align="right">  87 </TD> <TD> Female </TD> <TD> White </TD> <TD> Surgical </TD> <TD> No </TD> </TR>
+   </TABLE>
+
+In this dataset, we have mixed types of variables. In statistics, we are going to learn how to handle this type of information like a pro.
+
+Often, we find ourselves working with mixed data in the social sciences because we are looking at things from the social investigator's point of view.
+
+
+--- .class #id
+
+## Qualitative Data 
+
+### Nominal Levels of Data
+Nominal simply means naming. It is a system we use when we classify things. In the last example, you could see the gender and race column as examples of nominal levels. We can see them as individuals or grouped data. 
+
+* We can group this data and see frequencies of the data
+* Attributes: these are characteristics
+
+### Ordinal Levels of Data
+Ordinal involves a ranking or ordering of data. For example, if we are looking at class designations (i.e. freshman, sophomore, junior, senior, or grad student)...we can order them in terms of time in school and levels of expertise. Further, we can see them as individuals or grouped data.
+
+* We can group this data and see frequencies of the data
+* Attributes: ranked characteristics 
+
+--- .class #id
+
+## Frequency Distribution of Nominal Data
+
+* Dichotomies: two category variable (vote status: yes/no, disease status: infected/not infected)
+* n-category: more than two categories (like in our example)
+* Frequency distribution: tabulation that lists the variable, it's categories, and a frequency column. Add the numbers together to get the total $\Sigma$.
+* Grouped nominal data: data that are presented as a category of the variable listed, and the subjects are not named but are counted in the category that each subject falls into.
+
+Political Status  | $f =$
+------------------|------
+Democrat          | 100
+Republican        | 100
+Independent/Other | 200
+------------------|------
+Total n           | $\Sigma = 400$    
+
+
+--- .class #id
+
+## Frequency Distribution of Ordinal Data
+
+* n-category: more than two categories 
+* Frequency distribution: tabulation that lists the variable, categories, and frequency column.
+* Scores: numbers that are used to represent amounts of rankings.
+* Frequencies: headcounts or tallies for the number of cases in a particular category.
+* Grouped ordinal: presented in ranked categories from highest to lowest or lowest to highest.
+
+Fear of Heights   | $f =$
+------------------|------
+Extremely Mild    | 100
+Mild              | 100
+Neutral           | 200
+High              | 50
+Extremely High    | 50
+------------------|------
+Total n           | $\Sigma = 500$       
+
+
+--- .class &radio
+
+## Likert Scale
+
+**Likert Scale**: a scale whose categories are based on the level of agreement with a particular statement or issue.
+
+We are interested in seeing how viewers respond to a new movie. Please select your emotional response for  fear using the following question based on the previous commercial.
+
+I felt extreme fear after watching the previous commercial.
+
+1. Agree
+2. Somewhat Agree
+3. Neutral
+4. Somewhat Disagree
+5. Disagree
+
+*** .hint
+
+Select any response above.
+
+*** .explanation
+
+* All answers are correct.
+
+* We can measure this information statistically in the future.
+
+
+--- .class #id
+
+## Car Data
+
+* contains quantitative data
+
+```r
+data(mtcars)
+#mt.sub <- mt.sub[, 1:6]
+print(xtable(head(mtcars, 5)), type="html")
+```
+
+<!-- html table generated in R 3.1.0 by xtable 1.7-3 package -->
+<!-- Tue Sep  2 20:38:37 2014 -->
+<TABLE border=1>
+<TR> <TH>  </TH> <TH> mpg </TH> <TH> cyl </TH> <TH> disp </TH> <TH> hp </TH> <TH> drat </TH> <TH> wt </TH> <TH> qsec </TH> <TH> vs </TH> <TH> am </TH> <TH> gear </TH> <TH> carb </TH>  </TR>
+  <TR> <TD align="right"> Mazda RX4 </TD> <TD align="right"> 21.00 </TD> <TD align="right"> 6.00 </TD> <TD align="right"> 160.00 </TD> <TD align="right"> 110.00 </TD> <TD align="right"> 3.90 </TD> <TD align="right"> 2.62 </TD> <TD align="right"> 16.46 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 4.00 </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD align="right"> Mazda RX4 Wag </TD> <TD align="right"> 21.00 </TD> <TD align="right"> 6.00 </TD> <TD align="right"> 160.00 </TD> <TD align="right"> 110.00 </TD> <TD align="right"> 3.90 </TD> <TD align="right"> 2.88 </TD> <TD align="right"> 17.02 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 4.00 </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD align="right"> Datsun 710 </TD> <TD align="right"> 22.80 </TD> <TD align="right"> 4.00 </TD> <TD align="right"> 108.00 </TD> <TD align="right"> 93.00 </TD> <TD align="right"> 3.85 </TD> <TD align="right"> 2.32 </TD> <TD align="right"> 18.61 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 4.00 </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD align="right"> Hornet 4 Drive </TD> <TD align="right"> 21.40 </TD> <TD align="right"> 6.00 </TD> <TD align="right"> 258.00 </TD> <TD align="right"> 110.00 </TD> <TD align="right"> 3.08 </TD> <TD align="right"> 3.21 </TD> <TD align="right"> 19.44 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 3.00 </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD align="right"> Hornet Sportabout </TD> <TD align="right"> 18.70 </TD> <TD align="right"> 8.00 </TD> <TD align="right"> 360.00 </TD> <TD align="right"> 175.00 </TD> <TD align="right"> 3.15 </TD> <TD align="right"> 3.44 </TD> <TD align="right"> 17.02 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 3.00 </TD> <TD align="right"> 2.00 </TD> </TR>
+   </TABLE>
+
+
+
+--- .class #id
+
+## Qualitative Data
+
+* Interval Levels of Data
+  * the subject receives a numerical score 
+  * can be positive or negative
+  * raw score: individual listing
+  * example: temperature 
+
+* Ratio Levels of Data
+  * similar to interval 
+  * absolute zero: zero is absolute
+  * can not be negative
+  * famous example: Absolute Zero, Kelvin Scale
+
+--- .class #id
+
+## A bit more about data
+
+* Demographic variables: background information on the human subjects studied.
+* Ungrouped frequency distribution: every scores listed in a sequence (usually highest to lowest) 
+* Grouped interval data: interval
+  * Class interval: interval that indicates the space between two end points
+  * Closed ended: each class interval must have an upper and lower limit
+
+```r
+mpg.cars <- table(mtcars$mpg)
+print(xtable(mpg.cars), type="html", floating=TRUE)
+```
+
+<!-- html table generated in R 3.1.0 by xtable 1.7-3 package -->
+<!-- Tue Sep  2 21:07:31 2014 -->
+<TABLE border=1>
+<TR> <TH>  </TH> <TH> V1 </TH>  </TR>
+  <TR> <TD align="right"> 10.4 </TD> <TD align="right">   2 </TD> </TR>
+  <TR> <TD align="right"> 13.3 </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD align="right"> 14.3 </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD align="right"> 14.7 </TD> <TD align="right">   1 </TD> </TR>
+   </TABLE>
+
+--- .class #id
+
+## Scores vs. Frequencies
+
+* Open ended: class interval that has a lower limit but no upper limit or vice versa
+* Closed ended: class interval that has a lower and upper limit
+* $f$ = frequency
+
+Example of kids in daycare
+
+Age Range   | $f$
+------------|----
+0 to 5      | 5
+5.5 to 10.5 | 10
+------------|----
+$n$         | 15
+
+
+--- .class #id
+
+## Exercises: Your Turn
+
+Class Assignment: Work in groups to perform the following tasks. Send an email with all names attached to the email regarding the assignment labeled with today's date.
+
+* identify at least 5 variable examples for each type of measurement
+  * nominal
+  * ordinal
+  * interval
+  * ratio
+* what subject would you expect to find the different types of variables in data
+  * nominal
+  * ordinal
+  * interval
+  * ratio
+
+
+--- .class #id
+
+## Next week:
+
+* Assignment Schedule
+* Chapter 3 and 4
+* Homework 1
+* Writing Assignment Proposal Discussion
+
+
+--- .class #id
