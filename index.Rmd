@@ -221,7 +221,7 @@ print(xtable(head(mtcars, 5)), type="html")
 
 --- .class #id
 
-## Qualitative Data
+## Quantitative Data
 
 * Interval Levels of Data
   * the subject receives a numerical score 
